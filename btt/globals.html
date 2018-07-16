@@ -98,6 +98,7 @@
 								<li class="tsd-kind-class"><a href="classes/ftrigger.html" class="tsd-kind-icon">FTrigger</a></li>
 								<li class="tsd-kind-class"><a href="classes/fwidget.html" class="tsd-kind-icon">FWidget</a></li>
 								<li class="tsd-kind-class"><a href="classes/trigger.html" class="tsd-kind-icon">Trigger</a></li>
+								<li class="tsd-kind-class"><a href="classes/variablestore.html" class="tsd-kind-icon">Variable<wbr>Store</a></li>
 								<li class="tsd-kind-class"><a href="classes/widget.html" class="tsd-kind-icon">Widget</a></li>
 							</ul>
 						</section>
@@ -128,7 +129,6 @@
 								<li class="tsd-kind-function tsd-is-not-exported"><a href="globals.html#gettriggeridbyeventname" class="tsd-kind-icon">get<wbr>Trigger<wbr>IdBy<wbr>Event<wbr>Name</a></li>
 								<li class="tsd-kind-function tsd-is-not-exported"><a href="globals.html#gettriggermap" class="tsd-kind-icon">get<wbr>Trigger<wbr>Map</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#geturl" class="tsd-kind-icon">get<wbr>Url</a></li>
-								<li class="tsd-kind-function"><a href="globals.html#init" class="tsd-kind-icon">init</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#makeaction" class="tsd-kind-icon">make<wbr>Action</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#mapshortcutnotationtobtt" class="tsd-kind-icon">map<wbr>Shortcut<wbr>Notation<wbr>ToBTT</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#params" class="tsd-kind-icon">params</a></li>
@@ -145,7 +145,7 @@
 					<div class="tsd-signature tsd-kind-icon">KEYS<span class="tsd-signature-symbol">:</span> <a href="interfaces/ikey.html" class="tsd-signature-type">IKey</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> =&nbsp;[{&quot;key&quot;: &quot;ESC&quot;,&quot;code&quot;: 53}, {&quot;key&quot;: &quot;Mission&quot;, // i guess its mission control / launchpad button&quot;code&quot;: 160}, {&quot;key&quot;: &quot;§&quot;,&quot;code&quot;: 10}, {&quot;key&quot;: &quot;1&quot;,&quot;code&quot;: 18}, {&quot;key&quot;: &quot;2&quot;,&quot;code&quot;: 19}, {&quot;key&quot;: &quot;3&quot;,&quot;code&quot;: 20}, {&quot;key&quot;: &quot;4&quot;,&quot;code&quot;: 21}, {&quot;key&quot;: &quot;5&quot;,&quot;code&quot;: 23}, {&quot;key&quot;: &quot;6&quot;,&quot;code&quot;: 22}, {&quot;key&quot;: &quot;7&quot;,&quot;code&quot;: 26}, {&quot;key&quot;: &quot;8&quot;,&quot;code&quot;: 28}, {&quot;key&quot;: &quot;9&quot;,&quot;code&quot;: 25}, {&quot;key&quot;: &quot;0&quot;,&quot;code&quot;: 29}, {&quot;key&quot;: &quot;-&quot;,&quot;code&quot;: 27}, {&quot;key&quot;: &quot;&#x3D;&quot;,&quot;code&quot;: 24}, {&quot;key&quot;: &quot;Backspace&quot;,&quot;code&quot;: 51}, {&quot;key&quot;: &quot;Tab&quot;,&quot;code&quot;: 48}, {&quot;key&quot;: &quot;Q&quot;,&quot;code&quot;: 12}, {&quot;key&quot;: &quot;W&quot;,&quot;code&quot;: 13}, {&quot;key&quot;: &quot;E&quot;,&quot;code&quot;: 14}, {&quot;key&quot;: &quot;R&quot;,&quot;code&quot;: 15}, {&quot;key&quot;: &quot;T&quot;,&quot;code&quot;: 17}, {&quot;key&quot;: &quot;Y&quot;,&quot;code&quot;: 16}, {&quot;key&quot;: &quot;U&quot;,&quot;code&quot;: 32}, {&quot;key&quot;: &quot;I&quot;,&quot;code&quot;: 34}, {&quot;key&quot;: &quot;O&quot;,&quot;code&quot;: 31}, {&quot;key&quot;: &quot;P&quot;,&quot;code&quot;: 35}, {&quot;key&quot;: &quot;[&quot;,&quot;code&quot;: 33}, {&quot;key&quot;: &quot;]&quot;,&quot;code&quot;: 30}, {&quot;key&quot;: &quot;Enter&quot;,&quot;code&quot;: 36}, {&quot;key&quot;: &quot;A&quot;,&quot;code&quot;: 0,}, {&quot;key&quot;: &quot;S&quot;,&quot;code&quot;: 1}, {&quot;key&quot;: &quot;D&quot;,&quot;code&quot;: 2}, {&quot;key&quot;: &quot;F&quot;,&quot;code&quot;: 3}, {&quot;key&quot;: &quot;G&quot;,&quot;code&quot;: 5}, {&quot;key&quot;: &quot;H&quot;,&quot;code&quot;: 4}, {&quot;key&quot;: &quot;J&quot;,&quot;code&quot;: 38}, {&quot;key&quot;: &quot;K&quot;,&quot;code&quot;: 40}, {&quot;key&quot;: &quot;L&quot;,&quot;code&quot;: 37}, {&quot;key&quot;: &quot;;&quot;,&quot;code&quot;: 41}, {&quot;key&quot;: &quot;&#x27;&quot;,&quot;code&quot;: 39}, {&quot;key&quot;: &quot;\\&quot;,&quot;code&quot;: 42}, {&quot;key&quot;: &quot;LShift&quot;,&quot;code&quot;: 56}, {&quot;key&quot;: &quot;Shift&quot;,&quot;code&quot;: 56}, {&quot;key&quot;: &quot;&#x60;&quot;,&quot;code&quot;: 50}, {&quot;key&quot;: &quot;Z&quot;,&quot;code&quot;: 6}, {&quot;key&quot;: &quot;X&quot;,&quot;code&quot;: 7}, {&quot;key&quot;: &quot;C&quot;,&quot;code&quot;: 8}, {&quot;key&quot;: &quot;V&quot;,&quot;code&quot;: 9}, {&quot;key&quot;: &quot;B&quot;,&quot;code&quot;: 11}, {&quot;key&quot;: &quot;N&quot;,&quot;code&quot;: 45}, {&quot;key&quot;: &quot;M&quot;,&quot;code&quot;: 46}, {&quot;key&quot;: &quot;,&quot;,&quot;code&quot;: 43}, {&quot;key&quot;: &quot;.&quot;,&quot;code&quot;: 47}, {&quot;key&quot;: &quot;/&quot;,&quot;code&quot;: 44}, {&quot;key&quot;: &quot;RShift&quot;,&quot;code&quot;: 60}, {&quot;key&quot;: &quot;Fn&quot;,&quot;code&quot;: 63}, {&quot;key&quot;: &quot;Ctrl&quot;,&quot;code&quot;: 59}, {&quot;key&quot;: &quot;LAlt&quot;,&quot;code&quot;: 58}, {&quot;key&quot;: &quot;Alt&quot;,&quot;code&quot;: 58}, {&quot;key&quot;: &quot;LCmd&quot;,&quot;code&quot;: 55}, {&quot;key&quot;: &quot;Cmd&quot;,&quot;code&quot;: 55}, {&quot;key&quot;: &quot;Space&quot;,&quot;code&quot;: 49}, {&quot;key&quot;: &quot;RCmd&quot;,&quot;code&quot;: 54}, {&quot;key&quot;: &quot;RAlt&quot;,&quot;code&quot;: 61}, {&quot;key&quot;: &quot;Left&quot;,&quot;code&quot;: 123}, {&quot;key&quot;: &quot;Down&quot;,&quot;code&quot;: 125}, {&quot;key&quot;: &quot;Right&quot;,&quot;code&quot;: 124}, {&quot;key&quot;: &quot;Up&quot;,&quot;code&quot;: 126}]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/01f4e07/src/common/keys.ts#L6">common/keys.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/c60e860/src/common/keys.ts#L6">common/keys.ts:6</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -155,7 +155,7 @@
 					<div class="tsd-signature tsd-kind-icon">delete<wbr>Trigger<wbr>Fn<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/01f4e07/src/common/util.ts#L7">common/util.ts:7</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/c60e860/src/common/util.ts#L7">common/util.ts:7</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -165,7 +165,7 @@
 					<div class="tsd-signature tsd-kind-icon">fetch<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/01f4e07/src/common/util.ts#L6">common/util.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/c60e860/src/common/util.ts#L6">common/util.ts:6</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -182,7 +182,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/01f4e07/src/common/util.ts#L83">common/util.ts:83</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/c60e860/src/common/util.ts#L83">common/util.ts:83</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -212,7 +212,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/01f4e07/src/common/util.ts#L54">common/util.ts:54</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/c60e860/src/common/util.ts#L54">common/util.ts:54</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -248,7 +248,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/01f4e07/src/common/util.ts#L108">common/util.ts:108</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/c60e860/src/common/util.ts#L108">common/util.ts:108</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -284,7 +284,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/01f4e07/src/backend/util.ts#L16">backend/util.ts:16</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/c60e860/src/backend/util.ts#L16">backend/util.ts:16</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -316,7 +316,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/01f4e07/src/common/util.ts#L183">common/util.ts:183</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/c60e860/src/common/util.ts#L183">common/util.ts:183</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -349,7 +349,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/01f4e07/src/backend/util.ts#L7">backend/util.ts:7</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/c60e860/src/backend/util.ts#L7">backend/util.ts:7</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -379,7 +379,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/01f4e07/src/common/util.ts#L167">common/util.ts:167</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/c60e860/src/common/util.ts#L167">common/util.ts:167</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -409,7 +409,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/01f4e07/src/common/util.ts#L130">common/util.ts:130</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/c60e860/src/common/util.ts#L130">common/util.ts:130</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -440,7 +440,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/01f4e07/src/common/util.ts#L142">common/util.ts:142</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/c60e860/src/common/util.ts#L142">common/util.ts:142</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -462,7 +462,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/01f4e07/src/common/util.ts#L24">common/util.ts:24</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/c60e860/src/common/util.ts#L24">common/util.ts:24</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -481,29 +481,6 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
-					<a name="init" class="tsd-anchor"></a>
-					<h3>init</h3>
-					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">init<span class="tsd-signature-symbol">(</span>instanceConfig<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IBTTConfig</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IState</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/01f4e07/src/common/state.ts#L9">common/state.ts:9</a></li>
-								</ul>
-							</aside>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>instanceConfig: <span class="tsd-signature-type">IBTTConfig</span></h5>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">IState</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function">
 					<a name="makeaction" class="tsd-anchor"></a>
 					<h3>make<wbr>Action</h3>
 					<ul class="tsd-signatures tsd-kind-function">
@@ -513,7 +490,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/01f4e07/src/common/util.ts#L32">common/util.ts:32</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/c60e860/src/common/util.ts#L32">common/util.ts:32</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -547,7 +524,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/01f4e07/src/common/keys.ts#L219">common/keys.ts:219</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/c60e860/src/common/keys.ts#L219">common/keys.ts:219</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -577,7 +554,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/01f4e07/src/common/util.ts#L66">common/util.ts:66</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/c60e860/src/common/util.ts#L66">common/util.ts:66</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -702,6 +679,9 @@
 						<a href="classes/trigger.html" class="tsd-kind-icon">Trigger</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/variablestore.html" class="tsd-kind-icon">Variable<wbr>Store</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/widget.html" class="tsd-kind-icon">Widget</a>
 					</li>
 					<li class=" tsd-kind-interface tsd-is-not-exported">
@@ -745,9 +725,6 @@
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#geturl" class="tsd-kind-icon">get<wbr>Url</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#init" class="tsd-kind-icon">init</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#makeaction" class="tsd-kind-icon">make<wbr>Action</a>
