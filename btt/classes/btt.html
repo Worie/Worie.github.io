@@ -106,8 +106,10 @@
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="btt.html#addeventlistener" class="tsd-kind-icon">add<wbr>Event<wbr>Listener</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="btt.html#addtriggeraction" class="tsd-kind-icon">add<wbr>Trigger<wbr>Action</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="btt.html#delaynextaction" class="tsd-kind-icon">delay<wbr>Next<wbr>Action</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="btt.html#do" class="tsd-kind-icon">do</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="btt.html#executescript" class="tsd-kind-icon">execute<wbr>Script</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="btt.html#hapticfeedback" class="tsd-kind-icon">haptic<wbr>Feedback</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="btt.html#launchapplication" class="tsd-kind-icon">launch<wbr>Application</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="btt.html#lockscreen" class="tsd-kind-icon">lock<wbr>Screen</a></li>
@@ -116,6 +118,7 @@
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="btt.html#mute" class="tsd-kind-icon">mute</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="btt.html#quit" class="tsd-kind-icon">quit</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="btt.html#removeeventlistener" class="tsd-kind-icon">remove<wbr>Event<wbr>Listener</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class"><a href="btt.html#removetriggeraction" class="tsd-kind-icon">remove<wbr>Trigger<wbr>Action</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="btt.html#restart" class="tsd-kind-icon">restart</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="btt.html#sendshortcut" class="tsd-kind-icon">send<wbr>Shortcut</a></li>
 								<li class="tsd-kind-method tsd-parent-kind-class"><a href="btt.html#sendtext" class="tsd-kind-icon">send<wbr>Text</a></li>
@@ -150,7 +153,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L53">btt.ts:53</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L53">btt.ts:53</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -177,7 +180,7 @@
 					<div class="tsd-signature tsd-kind-icon">Trigger<span class="tsd-signature-symbol">:</span> <a href="ftrigger.html" class="tsd-signature-type">FTrigger</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L44">btt.ts:44</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L44">btt.ts:44</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -187,7 +190,7 @@
 					<div class="tsd-signature tsd-kind-icon">Widget<span class="tsd-signature-symbol">:</span> <a href="fwidget.html" class="tsd-signature-type">FWidget</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L47">btt.ts:47</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L47">btt.ts:47</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -197,7 +200,7 @@
 					<div class="tsd-signature tsd-kind-icon">state<span class="tsd-signature-symbol">:</span> <a href="variablestore.html" class="tsd-signature-type">VariableStore</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L41">btt.ts:41</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L41">btt.ts:41</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -214,27 +217,86 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L77">btt.ts:77</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L93">btt.ts:93</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Adds event listener to BTT. Keep in mind this is persistent, so if you call this method twice,
-									two entries will be added to BTT. Closing the browser / node process won&#39;t make the listeners die</p>
+									<p>Creates actual event listener that&#39;ll be run upon certain event type detection.
+									The code will be invoked in btt-node-server, and this method is dependand on this project</p>
 								</div>
+								<p>Keep in mind that this is persisent - it&#39;ll exist until you manually delete it.</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
 									<h5>eventType: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>string, created from action enum identifier</p>
+										<p>event type of specific action (for example, oneFingerForceClick)</p>
 									</div>
 								</li>
 								<li>
 									<h5>cb: <span class="tsd-signature-type">function</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>IEventCallback</p>
+										<p>callback function that&#39;ll be invoked upon event detection</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">__type</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>e: <span class="tsd-signature-type">any</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">__type</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addtriggeraction" class="tsd-anchor"></a>
+					<h3>add<wbr>Trigger<wbr>Action</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Trigger<wbr>Action<span class="tsd-signature-symbol">(</span>eventType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, cb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, options<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L124">btt.ts:124</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Adds a trigger action to the BetterTouchTool. Keep in mind, that the callback function that
+										you&#39;ll pass to this function will be invoked upon registering the action in the BetterTouchTool,
+									not after you trigger the specific eventType!</p>
+								</div>
+								<p>Keep in mind that this is persisent - it&#39;ll exist until you manually delete it.</p>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>eventType: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>event type of specific action (for example, oneFingerForceClick)</p>
+									</div>
+								</li>
+								<li>
+									<h5>cb: <span class="tsd-signature-type">function</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>callback function that&#39;ll define what actions should be executed</p>
 									</div>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter-siganture">
@@ -255,6 +317,12 @@
 										</li>
 									</ul>
 								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> options: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>additional options if you want to override the JSON somehow to fit your needs</p>
+									</div>
+								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
 						</li>
@@ -270,7 +338,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L249">btt.ts:249</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L269">btt.ts:269</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -302,7 +370,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L135">btt.ts:135</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L77">btt.ts:77</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -324,6 +392,37 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="executescript" class="tsd-anchor"></a>
+					<h3>execute<wbr>Script</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">execute<wbr>Script<span class="tsd-signature-symbol">(</span>code<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="aexecutescript.html" class="tsd-signature-type">AExecuteScript</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L172">btt.ts:172</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Executes passed nodejs script. Requires manual specificying of node executable binary if used on frontend</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>code: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>a code to run</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="aexecutescript.html" class="tsd-signature-type">AExecuteScript</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
 					<a name="hapticfeedback" class="tsd-anchor"></a>
 					<h3>haptic<wbr>Feedback</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
@@ -333,7 +432,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L204">btt.ts:204</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L224">btt.ts:224</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -366,7 +465,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L211">btt.ts:211</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L231">btt.ts:231</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -394,7 +493,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L298">btt.ts:298</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L318">btt.ts:318</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -416,7 +515,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L305">btt.ts:305</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L325">btt.ts:325</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -432,13 +531,13 @@
 					<a name="movemouse" class="tsd-anchor"></a>
 					<h3>move<wbr>Mouse</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
-						<li class="tsd-signature tsd-kind-icon">move<wbr>Mouse<span class="tsd-signature-symbol">(</span>config<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IMoveMouseConfig</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="amovemouse.html" class="tsd-signature-type">AMoveMouse</a></li>
+						<li class="tsd-signature tsd-kind-icon">move<wbr>Mouse<span class="tsd-signature-symbol">(</span>moveMouseConfig<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IMoveMouseConfig</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="amovemouse.html" class="tsd-signature-type">AMoveMouse</a></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L256">btt.ts:256</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L276">btt.ts:276</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -449,7 +548,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>config: <span class="tsd-signature-type">IMoveMouseConfig</span></h5>
+									<h5>moveMouseConfig: <span class="tsd-signature-type">IMoveMouseConfig</span></h5>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <a href="amovemouse.html" class="tsd-signature-type">AMoveMouse</a></h4>
@@ -466,7 +565,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L225">btt.ts:225</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L245">btt.ts:245</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -488,7 +587,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L333">btt.ts:333</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L353">btt.ts:353</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -510,12 +609,12 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L122">btt.ts:122</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L106">btt.ts:106</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Removes event listener</p>
+									<p>Removes previously created event listener</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -523,13 +622,68 @@
 								<li>
 									<h5>eventType: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>string, created from action enum identifier</p>
+										<p>event type of specific action (for example, oneFingerForceClick)</p>
 									</div>
 								</li>
 								<li>
 									<h5>cb: <span class="tsd-signature-type">function</span></h5>
 									<div class="tsd-comment tsd-typography">
-										<p>IEventCallback</p>
+										<p>callback function that&#39;ll be invoked upon event detection</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">__type</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>e: <span class="tsd-signature-type">any</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">__type</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="removetriggeraction" class="tsd-anchor"></a>
+					<h3>remove<wbr>Trigger<wbr>Action</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Trigger<wbr>Action<span class="tsd-signature-symbol">(</span>eventType<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, cb<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L138">btt.ts:138</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Removes a trigger of specified ID from the BetterTouchTool</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>eventType: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>event type of specific action (for example, oneFingerForceClick)</p>
+									</div>
+								</li>
+								<li>
+									<h5>cb: <span class="tsd-signature-type">function</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>a callback that was intended to run</p>
 									</div>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter-siganture">
@@ -565,7 +719,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L326">btt.ts:326</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L346">btt.ts:346</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -587,7 +741,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L148">btt.ts:148</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L154">btt.ts:154</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -629,7 +783,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L193">btt.ts:193</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L213">btt.ts:213</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -657,7 +811,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L186">btt.ts:186</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L206">btt.ts:206</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -685,7 +839,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L291">btt.ts:291</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L311">btt.ts:311</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -713,7 +867,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L319">btt.ts:319</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L339">btt.ts:339</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -735,7 +889,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L312">btt.ts:312</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L332">btt.ts:332</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -757,7 +911,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L232">btt.ts:232</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L252">btt.ts:252</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -779,7 +933,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L239">btt.ts:239</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L259">btt.ts:259</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -801,7 +955,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L218">btt.ts:218</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L238">btt.ts:238</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -829,7 +983,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L284">btt.ts:284</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L304">btt.ts:304</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -851,7 +1005,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L164">btt.ts:164</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L184">btt.ts:184</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -873,7 +1027,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L270">btt.ts:270</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L290">btt.ts:290</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -895,7 +1049,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L277">btt.ts:277</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L297">btt.ts:297</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -917,7 +1071,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L263">btt.ts:263</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L283">btt.ts:283</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -939,7 +1093,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L171">btt.ts:171</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L191">btt.ts:191</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -961,7 +1115,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/c7013d7/src/btt.ts#L179">btt.ts:179</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/2ac1e6b/src/btt.ts#L199">btt.ts:199</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1015,10 +1169,16 @@
 								<a href="btt.html#addeventlistener" class="tsd-kind-icon">add<wbr>Event<wbr>Listener</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="btt.html#addtriggeraction" class="tsd-kind-icon">add<wbr>Trigger<wbr>Action</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="btt.html#delaynextaction" class="tsd-kind-icon">delay<wbr>Next<wbr>Action</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="btt.html#do" class="tsd-kind-icon">do</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="btt.html#executescript" class="tsd-kind-icon">execute<wbr>Script</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="btt.html#hapticfeedback" class="tsd-kind-icon">haptic<wbr>Feedback</a>
@@ -1043,6 +1203,9 @@
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="btt.html#removeeventlistener" class="tsd-kind-icon">remove<wbr>Event<wbr>Listener</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class">
+								<a href="btt.html#removetriggeraction" class="tsd-kind-icon">remove<wbr>Trigger<wbr>Action</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class">
 								<a href="btt.html#restart" class="tsd-kind-icon">restart</a>
