@@ -117,7 +117,7 @@ btt.triggerShortcut(<span class="hljs-string">'cmd+space'</span>).invoke()
   .then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> btt.toggleNightShift().invoke());
 
 <span class="hljs-comment">// creates a trigger in BetterTouchTool. Keep in mind that this is persistent until you manually delete it!</span>
-btt.addEventListener(<span class="hljs-string">'oneFingerForceClick'</span>, <span class="hljs-function">(<span class="hljs-params">ev</span>) =&gt;</span> {
+btt.addTriggerAction(<span class="hljs-string">'oneFingerForceClick'</span>, <span class="hljs-function">(<span class="hljs-params">ev</span>) =&gt;</span> {
 
   <span class="hljs-comment">// create a list of actions that you want to perform on single finger force click</span>
   <span class="hljs-keyword">const</span> actionsToInvoke = [
@@ -135,8 +135,21 @@ btt.addEventListener(<span class="hljs-string">'oneFingerForceClick'</span>, <sp
 <span class="hljs-built_in">console</span>.log(btt.triggerShortcut(<span class="hljs-string">'cmd+space'</span>).url);
 
 <span class="hljs-comment">// you can also delete an event listener - trigger: </span>
-btt.removeEventListener(<span class="hljs-string">'oneFingerForceClick'</span>, callbackFuntion);
+btt.removeTriggerAction(<span class="hljs-string">'oneFingerForceClick'</span>, callbackFuntion);
 
+<span class="hljs-comment">// you can also define real callbacks that'll be triggered once certain event happens!</span>
+<span class="hljs-comment">// however, that requires the btt-node-server project. Have a look at the docs or example section to learn more</span>
+btt.addEventListener(<span class="hljs-string">'threeFingerDoubleTap'</span>, <span class="hljs-function">(<span class="hljs-params">ev</span>) =&gt;</span> {
+  <span class="hljs-keyword">const</span> intervalID = setInterval(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
+    btt.showHUD({ title: <span class="hljs-string">'It works!'</span>}).invoke();
+  }, <span class="hljs-number">1000</span>);
+
+  <span class="hljs-comment">// the value you return will be returned by the btt-node-server </span>
+  <span class="hljs-keyword">return</span> { messsage: <span class="hljs-string">'Hello world!'</span> };
+});
+
+
+<span class="hljs-comment">// surely, you can use removeEventListener, similary to native JS method implementation</span>
 </code></pre>
 				<p>For more advanced examples you can visit <a href="examples">the example section</a></p>
 				<h2 id="docs">Docs</h2>
@@ -148,8 +161,9 @@ btt.removeEventListener(<span class="hljs-string">'oneFingerForceClick'</span>, 
 				<ul>
 					<li><a href="https://github.com/Worie/btt">btt</a> - BetterTouchTool management in JS</li>
 					<li><a href="https://github.com/Worie/btt-json-loader">btt-json-loader</a> - JSON loader for BTT</li>
-					<li><a href="https://github.com/Worie/btt-node">btt-node</a> Premature version of <a href="https://github.com/Worie/btt">btt</a> - deprecated</li>
+					<li><a href="https://github.com/Worie/btt-node-server">btt-node-server</a> - Simple express server, required for advanced event listeners handling</li>
 					<li><a href="https://github.com/Worie/btt-touchbar-widgets">btt-touchbar-widgets</a> - Working touchbar widgets, based on <a href="https://github.com/Worie/btt">btt</a></li>
+					<li><a href="https://github.com/Worie/btt-node">btt-node</a> Premature version of <a href="https://github.com/Worie/btt">btt</a> - deprecated</li>
 				</ul>
 				<h2 id="license">License</h2>
 				<p><a href="http://opensource.org/licenses/MIT">MIT</a></p>
