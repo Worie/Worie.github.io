@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>IWidgetConfig | btt</title>
+	<title>IEventParameter | btt</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="iwidgetconfig.html">IWidgetConfig</a>
+					<a href="ieventparameter.html">IEventParameter</a>
 				</li>
 			</ul>
-			<h1>Interface IWidgetConfig</h1>
+			<h1>Interface IEventParameter</h1>
 		</div>
 	</div>
 </header>
@@ -68,7 +68,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">IWidgetConfig</span>
+						<span class="target">IEventParameter</span>
 					</li>
 				</ul>
 			</section>
@@ -79,8 +79,11 @@
 						<section class="tsd-index-section ">
 							<h3>Properties</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iwidgetconfig.html#default" class="tsd-kind-icon">default</a></li>
-								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="iwidgetconfig.html#uuid" class="tsd-kind-icon">uuid</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ieventparameter.html#actions" class="tsd-kind-icon">actions</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ieventparameter.html#additionaljson" class="tsd-kind-icon">additionalJSON</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ieventparameter.html#comment" class="tsd-kind-icon">comment</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ieventparameter.html#config" class="tsd-kind-icon">config</a></li>
+								<li class="tsd-kind-property tsd-parent-kind-interface"><a href="ieventparameter.html#requiredmodifierkeys" class="tsd-kind-icon">required<wbr>Modifier<wbr>Keys</a></li>
 							</ul>
 						</section>
 					</div>
@@ -89,22 +92,52 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Properties</h2>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="default" class="tsd-anchor"></a>
-					<h3>default</h3>
-					<div class="tsd-signature tsd-kind-icon">default<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Function</span></div>
+					<a name="actions" class="tsd-anchor"></a>
+					<h3>actions</h3>
+					<div class="tsd-signature tsd-kind-icon">actions<span class="tsd-signature-symbol">:</span> <a href="../globals.html#actionjson" class="tsd-signature-type">ActionJSON</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/b218d7d/src/types/types.ts#L27">types/types.ts:27</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/b218d7d/src/types/types.ts#L91">types/types.ts:91</a></li>
 						</ul>
 					</aside>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
-					<a name="uuid" class="tsd-anchor"></a>
-					<h3>uuid</h3>
-					<div class="tsd-signature tsd-kind-icon">uuid<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<a name="additionaljson" class="tsd-anchor"></a>
+					<h3>additionalJSON</h3>
+					<div class="tsd-signature tsd-kind-icon">additionalJSON<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/b218d7d/src/types/types.ts#L26">types/types.ts:26</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/b218d7d/src/types/types.ts#L93">types/types.ts:93</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="comment" class="tsd-anchor"></a>
+					<h3>comment</h3>
+					<div class="tsd-signature tsd-kind-icon">comment<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/b218d7d/src/types/types.ts#L92">types/types.ts:92</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="config" class="tsd-anchor"></a>
+					<h3>config</h3>
+					<div class="tsd-signature tsd-kind-icon">config<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/b218d7d/src/types/types.ts#L97">types/types.ts:97</a></li>
+						</ul>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="requiredmodifierkeys" class="tsd-anchor"></a>
+					<h3>required<wbr>Modifier<wbr>Keys</h3>
+					<div class="tsd-signature tsd-kind-icon">required<wbr>Modifier<wbr>Keys<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-symbol">(</span><span class="tsd-signature-type">"fn"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"cmd"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"alt"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"ctrl"</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">"shift"</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/b218d7d/src/types/types.ts#L94">types/types.ts:94</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -123,13 +156,22 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-interface">
-						<a href="iwidgetconfig.html" class="tsd-kind-icon">IWidget<wbr>Config</a>
+						<a href="ieventparameter.html" class="tsd-kind-icon">IEvent<wbr>Parameter</a>
 						<ul>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="iwidgetconfig.html#default" class="tsd-kind-icon">default</a>
+								<a href="ieventparameter.html#actions" class="tsd-kind-icon">actions</a>
 							</li>
 							<li class=" tsd-kind-property tsd-parent-kind-interface">
-								<a href="iwidgetconfig.html#uuid" class="tsd-kind-icon">uuid</a>
+								<a href="ieventparameter.html#additionaljson" class="tsd-kind-icon">additionalJSON</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="ieventparameter.html#comment" class="tsd-kind-icon">comment</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="ieventparameter.html#config" class="tsd-kind-icon">config</a>
+							</li>
+							<li class=" tsd-kind-property tsd-parent-kind-interface">
+								<a href="ieventparameter.html#requiredmodifierkeys" class="tsd-kind-icon">required<wbr>Modifier<wbr>Keys</a>
 							</li>
 						</ul>
 					</li>
