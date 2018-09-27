@@ -76,23 +76,27 @@
 				<p>This package is a handy wrapper over <a href="https://folivora.ai/">BetterTouchTool</a> built in webserver API. (by <a href="https://github.com/fifafu">@Andreas Hegenberg</a>)</p>
 				<p>This package will allow you to automate you MacOS-running machine using JavaScript. You&#39;ll be able to:</p>
 				<ul>
+					<li>Create event listeners that&#39;ll be run within operating system, outside browser!</li>
 					<li>Toggle your do-not-disturb state</li>
 					<li>Show a system notification</li>
 					<li>Toggle Night Shift</li>
 					<li>Sleep your computer after timeout</li>
 					<li>Create your own <strong>touchbar widgets</strong></li>
 					<li>Feel a notification via <strong>haptic engine</strong></li>
+					<li>Control the brightness of the screen, keyboard</li>
+					<li>Control the volume levels</li>
 					<li>Use the content of your clipboard to be opened in specific url or application</li>
 					<li>Create your own UIs &quot;within system&quot; using web view </li>
 					<li>Trigger a system wide keyboard shortcut</li>
 					<li>Send a shortcut to specific application</li>
 					<li>Show / Hide / Open / Quit specific applcation</li>
 					<li>Move your mouse to specific position and click it</li>
+					<li>Hide your cursor</li>
 					<li>Lock / Unlock your MacOS machine</li>
-					<li>Integrate your flow with various APIs ...</li>
+					<li>Integrate your flow / touchbar with various APIs ...</li>
 				</ul>
 				<p><em>and anything else that BetterTouchTool or JavaScript specification will allow you to do!</em></p>
-				<h2 id="typings">Typings</h2>
+				<h2 id="typings-enabled-isomorphic-app">Typings enabled, isomorphic app</h2>
 				<p>This package provides it&#39;s own type definitions and can be run both on browser and nodejs environment.</p>
 				<h2 id="requirements">Requirements</h2>
 				<p>This package depends on application <a href="https://folivora.ai/">BetterTouchTool</a> in at least version v2.0.0, you need to have it installed and running before going anywhere further.</p>
@@ -100,6 +104,7 @@
 				<h2 id="installation">Installation</h2>
 				<p><code>npm install btt</code></p>
 				<h2 id="example-usage">Example usage</h2>
+				<p>First, you&#39;d need to create a btt instance passing the data for BTT webserver.</p>
 				<pre><code class="lang-ts"><span class="hljs-comment">// import Btt class from the package</span>
 <span class="hljs-keyword">import</span> { Btt } <span class="hljs-keyword">from</span> <span class="hljs-string">'btt'</span>;
 
@@ -111,13 +116,36 @@
   protocol: <span class="hljs-string">'http'</span>,
   version: <span class="hljs-string">'2.525'</span>,
 });
-
-<span class="hljs-comment">// sequentially run three actions - spotlight, type text and night shift</span>
-btt.triggerShortcut(<span class="hljs-string">'cmd+space'</span>).invoke()
+</code></pre>
+				<p>Now you can invoke the actions - there are plenty of way to do it, but all of those are promise based</p>
+				<pre><code class="lang-ts"><span class="hljs-comment">// sequentially run three actions - spotlight, type text and night shift</span>
+<span class="hljs-comment">// as all actions are promise based, you can use async/await notation without hussle</span>
+btt
+  .triggerShortcut(<span class="hljs-string">'cmd+space'</span>).invoke()
   .then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> btt.sendText({ text: <span class="hljs-string">'Hello world!'</span>}).invoke())
   .then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> btt.toggleNightShift().invoke());
 
-<span class="hljs-comment">// creates a trigger in BetterTouchTool. Keep in mind that this is persistent until you manually delete it!</span>
+<span class="hljs-comment">// you can also use custom chain method to simplify it even more, without using async/await</span>
+btt
+  .invokeChain()                      <span class="hljs-comment">// 1)</span>
+  .triggerShortcut(<span class="hljs-string">'cmd+space'</span>)       <span class="hljs-comment">// 2)</span>
+  .sendText({text: <span class="hljs-string">'Hello world!'</span>})   <span class="hljs-comment">// 3)</span>
+  .wait(<span class="hljs-number">1000</span>)                         <span class="hljs-comment">// 4)</span>
+  .toggleNightShift()                 <span class="hljs-comment">// 5)</span>
+  .call()                             <span class="hljs-comment">// 6)</span>
+  .then(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> <span class="hljs-built_in">console</span>.info(<span class="hljs-string">'done!'</span>))  <span class="hljs-comment">// 7)</span>
+
+<span class="hljs-comment">// Explanation:</span>
+<span class="hljs-comment">// 1) Starts method chaining</span>
+<span class="hljs-comment">// 2) Action that user want to perform</span>
+<span class="hljs-comment">// 3) Action that user want to perform</span>
+<span class="hljs-comment">// 4) Additional method available in chain only - wait before triggering next action</span>
+<span class="hljs-comment">// 5) Action that user want to perform</span>
+<span class="hljs-comment">// 6) Invokes all previously defined actions, ensuring the execution order</span>
+<span class="hljs-comment">// 7) Returns a promise that resolves once all of the actions are fulfilled</span>
+</code></pre>
+				<p>You can even register system-wide event listener within BTT that&#39;ll trigger particular actions</p>
+				<pre><code class="lang-ts"><span class="hljs-comment">// creates a trigger in BetterTouchTool. Keep in mind that this is persistent until you manually delete it!</span>
 btt.addTriggerAction(<span class="hljs-string">'oneFingerForceClick'</span>, <span class="hljs-function">(<span class="hljs-params">ev</span>) =&gt;</span> {
 
   <span class="hljs-comment">// create a list of actions that you want to perform on single finger force click</span>
@@ -132,18 +160,30 @@ btt.addTriggerAction(<span class="hljs-string">'oneFingerForceClick'</span>, <sp
   ev.actions.push(...actionsToInvoke);
 });
 
-<span class="hljs-comment">// get the url of the action - can be assigned to &lt;a&gt; element for example, and once clicked - will perform given action</span>
-<span class="hljs-built_in">console</span>.log(btt.triggerShortcut(<span class="hljs-string">'cmd+space'</span>).url);
-
 <span class="hljs-comment">// you can also delete an event listener - trigger: </span>
 btt.removeTriggerAction(<span class="hljs-string">'oneFingerForceClick'</span>, callbackFuntion);
+</code></pre>
+				<p>But the above method will trigger the callback upon running your script, not when particular event really occurs. If you need to call a function upon event recognition, you&#39;d need to use <a href="https://github.com/Worie/btt-node-server">btt-node-server</a> and use <code>addEventListener</code> and <code>removeEventListener</code> methods on btt instance. The callback you provide will be run in nodejs environment, within <code>vm</code>.</p>
+				<pre><code class="lang-ts"><span class="hljs-keyword">const</span> btt = <span class="hljs-keyword">new</span> Btt({
+  domain: <span class="hljs-string">'127.0.0.1'</span>,
+  port: <span class="hljs-number">8000</span>,
+  protocol: <span class="hljs-string">'http'</span>,
+  version: <span class="hljs-string">'2.525'</span>,
+  <span class="hljs-comment">// you need to pass eventServer to use this part of the lib</span>
+  eventServer: {
+    domain: <span class="hljs-string">'localhost'</span>,
+    port: <span class="hljs-number">8888</span>,
+  },
+});
 
-<span class="hljs-comment">// you can also define real callbacks that'll be triggered once certain event happens!</span>
-<span class="hljs-comment">// however, that requires the btt-node-server project. Have a look at the docs or example section to learn more</span>
-btt.addEventListener(<span class="hljs-string">'threeFingerDoubleTap'</span>, <span class="hljs-keyword">async</span> (ev) =&gt; {
+<span class="hljs-comment">// adds real event listener, that'll be run once event occurs</span>
+btt.addEventListener(<span class="hljs-string">'cmd+ctrl+alt+u'</span>, <span class="hljs-keyword">async</span> (ev) =&gt; {
+  <span class="hljs-comment">// write the code as you'd normally do -&gt; trigger the action for some interval</span>
   <span class="hljs-keyword">const</span> intervalID = setInterval(<span class="hljs-function"><span class="hljs-params">()</span> =&gt;</span> {
     btt.showHUD({ title: <span class="hljs-string">'It works!'</span>}).invoke();
   }, <span class="hljs-number">1000</span>);
+
+  <span class="hljs-comment">// you can use fetch API here or anything that your node version will support</span>
 
   <span class="hljs-comment">// will stop the interval after 10 seconds</span>
   <span class="hljs-keyword">await</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">Promise</span>(<span class="hljs-function">(<span class="hljs-params">res, rej</span>) =&gt;</span> {
@@ -153,13 +193,24 @@ btt.addEventListener(<span class="hljs-string">'threeFingerDoubleTap'</span>, <s
     }, <span class="hljs-number">10000</span>);
   });
 
-  <span class="hljs-comment">// the value you return will be returned by the btt-node-server </span>
+  <span class="hljs-comment">// the value you return from the callback, will be the response of the btt-node-server </span>
   <span class="hljs-keyword">return</span> { messsage: <span class="hljs-string">'Hello world!'</span> };
 });
-
-
-<span class="hljs-comment">// surely, you can use removeEventListener, similary to native JS method implementation</span>
 </code></pre>
+				<p>To get all available events, you&#39;d have to look in the enums (list of all valid events is going to be available soon).
+				Still, most of the time you can just guess it, because all event names are a lowercased equivalent of triggers from within <code>BetterTouchTool</code>.</p>
+				<h3 id="additional-action-information">Additional action information</h3>
+				<p>For use within browser, you can get the <code>url</code> that lies behind all actions and assign it to some <code>&lt;a href=&quot;${link}&quot;&gt;Link&lt;/a&gt;</code>. To get <code>link</code> you simply need to read the <code>.url</code> property of any action: </p>
+				<pre><code class="lang-ts"><span class="hljs-built_in">console</span>.log(
+  btt.triggerShortcut(<span class="hljs-string">'cmd+space'</span>).url
+);
+</code></pre>
+				<p>If you want to have a sneek peak on the generated action JSON, or want to share it with others who use <code>BetterTouchTool</code> you can read the <code>.json</code> property of any action. </p>
+				<pre><code class="lang-ts"><span class="hljs-built_in">console</span>.log(
+  btt.showHUD({ title: <span class="hljs-string">'Hello!'</span> }).json
+);
+</code></pre>
+				<h2 id="more-examples">More examples</h2>
 				<p>For more advanced examples you can visit <a href="https://github.com/Worie/btt/tree/master/examples">the example section</a></p>
 				<h2 id="docs">Docs</h2>
 				<p>You can visit the docs <a href="https://worie.github.io/btt/">here</a>.</p>
@@ -168,11 +219,9 @@ btt.addEventListener(<span class="hljs-string">'threeFingerDoubleTap'</span>, <s
 				So depending on your BTT version some actions may be glitchy. Do not hestitate to report those issues here or in <a href="https://community.folivora.ai/categories">official BTT community forum</a>.</p>
 				<h3 id="related-projects-">Related projects:</h3>
 				<ul>
-					<li><a href="https://github.com/Worie/btt">btt</a> - BetterTouchTool management in JS</li>
-					<li><a href="https://github.com/Worie/btt-json-loader">btt-json-loader</a> - JSON loader for BTT</li>
-					<li><a href="https://github.com/Worie/btt-node-server">btt-node-server</a> - Simple express server, required for advanced event listeners handling</li>
-					<li><a href="https://github.com/Worie/btt-touchbar-widgets">btt-touchbar-widgets</a> - Working touchbar widgets, based on <a href="https://github.com/Worie/btt">btt</a></li>
-					<li><a href="https://github.com/Worie/btt-node">btt-node</a> Premature version of <a href="https://github.com/Worie/btt">btt</a> - deprecated</li>
+					<li><a href="https://github.com/Worie/btt">btt</a> - BetterTouchTool management in JS<!-- * [btt-json-loader](https://github.com/Worie/btt-json-loader) - JSON loader for BTT --></li>
+					<li><a href="https://github.com/Worie/btt-node-server">btt-node-server</a> - Simple express server, required for advanced event listeners handling<!-- * [btt-touchbar-widgets](https://github.com/Worie/btt-touchbar-widgets) - Working touchbar widgets, based on [btt](https://github.com/Worie/btt) --></li>
+					<li><a href="https://github.com/Worie/btt-node">btt-node</a> Premature version of this package (<a href="https://github.com/Worie/btt">btt</a>) - deprecated</li>
 				</ul>
 				<h2 id="license">License</h2>
 				<p><a href="http://opensource.org/licenses/MIT">MIT</a></p>
@@ -197,6 +246,9 @@ btt.addEventListener(<span class="hljs-string">'threeFingerDoubleTap'</span>, <s
 					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/eventcategory.html" class="tsd-kind-icon">Event<wbr>Category</a>
+					</li>
+					<li class=" tsd-kind-enum tsd-is-not-exported">
+						<a href="enums/queuestatus.html" class="tsd-kind-icon">Queue<wbr>Status</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/adelaynextaction.html" class="tsd-kind-icon">ADelay<wbr>Next<wbr>Action</a>
@@ -297,6 +349,9 @@ btt.addEventListener(<span class="hljs-string">'threeFingerDoubleTap'</span>, <s
 					<li class=" tsd-kind-class">
 						<a href="classes/btt.html" class="tsd-kind-icon">Btt</a>
 					</li>
+					<li class=" tsd-kind-class tsd-is-not-exported">
+						<a href="classes/chain.html" class="tsd-kind-icon">Chain</a>
+					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/eventmanager.html" class="tsd-kind-icon">Event<wbr>Manager</a>
 					</li>
@@ -313,6 +368,9 @@ btt.addEventListener(<span class="hljs-string">'threeFingerDoubleTap'</span>, <s
 						<a href="classes/frontendutilities.html" class="tsd-kind-icon">Frontend<wbr>Utilities</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/keys.html" class="tsd-kind-icon">Keys</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/trigger.html" class="tsd-kind-icon">Trigger</a>
 					</li>
 					<li class=" tsd-kind-class">
@@ -323,6 +381,21 @@ btt.addEventListener(<span class="hljs-string">'threeFingerDoubleTap'</span>, <s
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/widget.html" class="tsd-kind-icon">Widget</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/actionconfig.html" class="tsd-kind-icon">Action<wbr>Config</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/actionrequirements.html" class="tsd-kind-icon">Action<wbr>Requirements</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/appconfig.html" class="tsd-kind-icon">App<wbr>Config</a>
+					</li>
+					<li class=" tsd-kind-interface">
+						<a href="interfaces/callresult.html" class="tsd-kind-icon">Call<wbr>Result</a>
+					</li>
+					<li class=" tsd-kind-interface tsd-has-type-parameter">
+						<a href="interfaces/class.html" class="tsd-kind-icon">Class</a>
 					</li>
 					<li class=" tsd-kind-interface">
 						<a href="interfaces/etrlaunchingonserialnumber.html" class="tsd-kind-icon">ETRLaunching<wbr>OnSerial<wbr>Number</a>
@@ -337,64 +410,61 @@ btt.addEventListener(<span class="hljs-string">'threeFingerDoubleTap'</span>, <s
 						<a href="interfaces/etrrecieveddistributednotificationwithname.html" class="tsd-kind-icon">ETRRecieved<wbr>Distributed<wbr>Notification<wbr>With<wbr>Name</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/iactionconfig.html" class="tsd-kind-icon">IAction<wbr>Config</a>
+						<a href="interfaces/eventparameter.html" class="tsd-kind-icon">Event<wbr>Parameter</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/iactionrequirements.html" class="tsd-kind-icon">IAction<wbr>Requirements</a>
+						<a href="interfaces/eventserverdefinition.html" class="tsd-kind-icon">Event<wbr>Server<wbr>Definition</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/ibttconfig.html" class="tsd-kind-icon">IBTTConfig</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-has-type-parameter">
-						<a href="interfaces/iclass.html" class="tsd-kind-icon">IClass</a>
+						<a href="interfaces/eventtrigger.html" class="tsd-kind-icon">Event<wbr>Trigger</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/ieventparameter.html" class="tsd-kind-icon">IEvent<wbr>Parameter</a>
+						<a href="interfaces/floatingwebviewconfig.html" class="tsd-kind-icon">Floating<wbr>Web<wbr>View<wbr>Config</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/ieventtrigger.html" class="tsd-kind-icon">IEvent<wbr>Trigger</a>
+						<a href="interfaces/keydefinition.html" class="tsd-kind-icon">Key<wbr>Definition</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/ifloatinghtmlconfig.html" class="tsd-kind-icon">IFloatingHTMLConfig</a>
-					</li>
-					<li class=" tsd-kind-interface tsd-is-not-exported">
-						<a href="interfaces/ikey.html" class="tsd-kind-icon">IKey</a>
+						<a href="interfaces/movemouseconfig.html" class="tsd-kind-icon">Move<wbr>Mouse<wbr>Config</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/imovemouseconfig.html" class="tsd-kind-icon">IMove<wbr>Mouse<wbr>Config</a>
+						<a href="interfaces/noticemessage.html" class="tsd-kind-icon">Notice<wbr>Message</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/inoticemessage.html" class="tsd-kind-icon">INotice<wbr>Message</a>
+						<a href="interfaces/sendtextconfig.html" class="tsd-kind-icon">Send<wbr>Text<wbr>Config</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/isendtextconfig.html" class="tsd-kind-icon">ISend<wbr>Text<wbr>Config</a>
+						<a href="interfaces/showhudconfig.html" class="tsd-kind-icon">ShowHUDConfig</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/iserverdefinition.html" class="tsd-kind-icon">IServer<wbr>Definition</a>
+						<a href="interfaces/shownotificationconfig.html" class="tsd-kind-icon">Show<wbr>Notification<wbr>Config</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/ishowhudconfig.html" class="tsd-kind-icon">IShowHUDConfig</a>
+						<a href="interfaces/showwebviewconfig.html" class="tsd-kind-icon">Show<wbr>Web<wbr>View<wbr>Config</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/ishownotificationconfig.html" class="tsd-kind-icon">IShow<wbr>Notification<wbr>Config</a>
+						<a href="interfaces/triggerconfig.html" class="tsd-kind-icon">Trigger<wbr>Config</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/ishowwebviewconfig.html" class="tsd-kind-icon">IShow<wbr>Web<wbr>View<wbr>Config</a>
+						<a href="interfaces/widgetconfig.html" class="tsd-kind-icon">Widget<wbr>Config</a>
 					</li>
 					<li class=" tsd-kind-interface">
-						<a href="interfaces/istate.html" class="tsd-kind-icon">IState</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/itouchbarwidgetcreateconfig.html" class="tsd-kind-icon">ITouchbar<wbr>Widget<wbr>Create<wbr>Config</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/itriggerconfig.html" class="tsd-kind-icon">ITrigger<wbr>Config</a>
-					</li>
-					<li class=" tsd-kind-interface">
-						<a href="interfaces/iwidgetconfig.html" class="tsd-kind-icon">IWidget<wbr>Config</a>
+						<a href="interfaces/widgetcreateconfig.html" class="tsd-kind-icon">Widget<wbr>Create<wbr>Config</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#actionjson" class="tsd-kind-icon">ActionJSON</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#apppayload" class="tsd-kind-icon">App<wbr>Payload</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#bttpayload" class="tsd-kind-icon">Btt<wbr>Payload</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chainentry" class="tsd-kind-icon">Chain<wbr>Entry</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chainresponse" class="tsd-kind-icon">Chain<wbr>Response</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#delaynextaction" class="tsd-kind-icon">Delay<wbr>Next<wbr>Action</a>
@@ -412,6 +482,9 @@ btt.addEventListener(<span class="hljs-string">'threeFingerDoubleTap'</span>, <s
 						<a href="globals.html#etrmovemousetotoprightcorner" class="tsd-kind-icon">ETRMove<wbr>Mouse<wbr>ToTop<wbr>Right<wbr>Corner</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#eventcallback" class="tsd-kind-icon">Event<wbr>Callback</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#eventmethod" class="tsd-kind-icon">Event<wbr>Method</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
@@ -421,10 +494,7 @@ btt.addEventListener(<span class="hljs-string">'threeFingerDoubleTap'</span>, <s
 						<a href="globals.html#hapticfeedback" class="tsd-kind-icon">Haptic<wbr>Feedback</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
-						<a href="globals.html#ibettertouchtoolpayload" class="tsd-kind-icon">IBetter<wbr>Touch<wbr>Tool<wbr>Payload</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="globals.html#ikeycombo" class="tsd-kind-icon">IKey<wbr>Combo</a>
+						<a href="globals.html#keycombo" class="tsd-kind-icon">Key<wbr>Combo</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#launchapplication" class="tsd-kind-icon">Launch<wbr>Application</a>
@@ -504,9 +574,6 @@ btt.addEventListener(<span class="hljs-string">'threeFingerDoubleTap'</span>, <s
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#triggershortcut" class="tsd-kind-icon">Trigger<wbr>Shortcut</a>
 					</li>
-					<li class=" tsd-kind-variable">
-						<a href="globals.html#keys" class="tsd-kind-icon">KEYS</a>
-					</li>
 					<li class=" tsd-kind-variable tsd-is-not-exported">
 						<a href="globals.html#namespace" class="tsd-kind-icon">NAMESPACE</a>
 					</li>
@@ -517,25 +584,13 @@ btt.addEventListener(<span class="hljs-string">'threeFingerDoubleTap'</span>, <s
 						<a href="globals.html#action" class="tsd-kind-icon">Action</a>
 					</li>
 					<li class=" tsd-kind-function">
+						<a href="globals.html#disallow" class="tsd-kind-icon">Disallow</a>
+					</li>
+					<li class=" tsd-kind-function">
 						<a href="globals.html#eventpayloadtemplate" class="tsd-kind-icon">Event<wbr>Payload<wbr>Template</a>
 					</li>
 					<li class=" tsd-kind-function tsd-is-not-exported">
 						<a href="globals.html#checkblacklistpresence" class="tsd-kind-icon">check<wbr>Black<wbr>List<wbr>Presence</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#createbitmaskforshortcut" class="tsd-kind-icon">create<wbr>Bitmask<wbr>For<wbr>Shortcut</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#getkeycode" class="tsd-kind-icon">get<wbr>Key<wbr>Code</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#isdifferentiating" class="tsd-kind-icon">is<wbr>Differentiating</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#isvalidshortcut" class="tsd-kind-icon">is<wbr>Valid<wbr>Shortcut</a>
-					</li>
-					<li class=" tsd-kind-function">
-						<a href="globals.html#mapshortcutnotationtobtt" class="tsd-kind-icon">map<wbr>Shortcut<wbr>Notation<wbr>ToBTT</a>
 					</li>
 				</ul>
 			</nav>

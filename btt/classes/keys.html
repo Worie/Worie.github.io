@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>EventTriggers | btt</title>
+	<title>Keys | btt</title>
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="../assets/css/main.css">
@@ -54,10 +54,10 @@
 					<a href="../globals.html">Globals</a>
 				</li>
 				<li>
-					<a href="eventtriggers.html">EventTriggers</a>
+					<a href="keys.html">Keys</a>
 				</li>
 			</ul>
-			<h1>Class EventTriggers</h1>
+			<h1>Class Keys</h1>
 		</div>
 	</div>
 </header>
@@ -68,7 +68,7 @@
 				<h3>Hierarchy</h3>
 				<ul class="tsd-hierarchy">
 					<li>
-						<span class="target">EventTriggers</span>
+						<span class="target">Keys</span>
 					</li>
 				</ul>
 			</section>
@@ -79,15 +79,17 @@
 						<section class="tsd-index-section ">
 							<h3>Accessors</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-static"><a href="eventtriggers.html#all" class="tsd-kind-icon">all</a></li>
+								<li class="tsd-kind-get-signature tsd-parent-kind-class tsd-is-static"><a href="keys.html#list" class="tsd-kind-icon">list</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
 							<h3>Methods</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="eventtriggers.html#getbycategory" class="tsd-kind-icon">get<wbr>ByCategory</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="eventtriggers.html#getbyid" class="tsd-kind-icon">get<wbr>ById</a></li>
-								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="eventtriggers.html#getbyname" class="tsd-kind-icon">get<wbr>ByName</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="keys.html#createbitmaskforshortcut" class="tsd-kind-icon">create<wbr>Bitmask<wbr>For<wbr>Shortcut</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="keys.html#getkeycode" class="tsd-kind-icon">get<wbr>Key<wbr>Code</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="keys.html#isdifferentiating" class="tsd-kind-icon">is<wbr>Differentiating</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="keys.html#isvalidshortcut" class="tsd-kind-icon">is<wbr>Valid<wbr>Shortcut</a></li>
+								<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="keys.html#mapshortcutnotationtobtt" class="tsd-kind-icon">map<wbr>Shortcut<wbr>Notation<wbr>ToBTT</a></li>
 							</ul>
 						</section>
 					</div>
@@ -96,24 +98,24 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Accessors</h2>
 				<section class="tsd-panel tsd-member tsd-kind-get-signature tsd-parent-kind-class tsd-is-static">
-					<a name="all" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> all</h3>
+					<a name="list" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> list</h3>
 					<ul class="tsd-signatures tsd-kind-get-signature tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> all<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/eventtrigger.html" class="tsd-signature-type">EventTrigger</a><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">get</span> list<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/keydefinition.html" class="tsd-signature-type">KeyDefinition</a><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/common/events/triggers.ts#L1081">common/events/triggers.ts:1081</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/common/keys.ts#L7">common/keys.ts:7</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Returns all predefined event trigger definitions</p>
+									<p>Returns full list of available keys</p>
 								</div>
 							</div>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/eventtrigger.html" class="tsd-signature-type">EventTrigger</a><span class="tsd-signature-symbol">[]</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/keydefinition.html" class="tsd-signature-type">KeyDefinition</a><span class="tsd-signature-symbol">[]</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -121,93 +123,156 @@
 			<section class="tsd-panel-group tsd-member-group ">
 				<h2>Methods</h2>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-					<a name="getbycategory" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>ByCategory</h3>
+					<a name="createbitmaskforshortcut" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> create<wbr>Bitmask<wbr>For<wbr>Shortcut</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>ByCategory<span class="tsd-signature-symbol">(</span>category<span class="tsd-signature-symbol">: </span><a href="../enums/eventcategory.html" class="tsd-signature-type">EventCategory</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/eventtrigger.html" class="tsd-signature-type">EventTrigger</a><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Bitmask<wbr>For<wbr>Shortcut<span class="tsd-signature-symbol">(</span>shortcut<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, differentiateLeftRight<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/common/events/triggers.ts#L1089">common/events/triggers.ts:1089</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/common/keys.ts#L327">common/keys.ts:327</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Returns all triggers that match the specified category</p>
+									<p>For details implementation look up to: <a href="https://community.folivora.ai/t/could-you-provide-a-formula-for-determining-keyboard-shortcuts-values/3606/2?u=worie">https://community.folivora.ai/t/could-you-provide-a-formula-for-determining-keyboard-shortcuts-values/3606/2?u=worie</a></p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>category: <a href="../enums/eventcategory.html" class="tsd-signature-type">EventCategory</a></h5>
+									<h5>shortcut: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>differentiateLeftRight: <span class="tsd-signature-type">boolean</span></h5>
 									<div class="tsd-comment tsd-typography">
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/eventtrigger.html" class="tsd-signature-type">EventTrigger</a><span class="tsd-signature-symbol">[]</span></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-					<a name="getbyid" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>ById</h3>
+					<a name="getkeycode" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>Key<wbr>Code</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>ById<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/eventtrigger.html" class="tsd-signature-type">EventTrigger</a></li>
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Key<wbr>Code<span class="tsd-signature-symbol">(</span>key<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/common/events/triggers.ts#L1097">common/events/triggers.ts:1097</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/common/keys.ts#L371">common/keys.ts:371</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Returns single trigger based on id</p>
+									<p>Returns the keycode of specific key</p>
 								</div>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>id: <span class="tsd-signature-type">number</span></h5>
+									<h5>key: <span class="tsd-signature-type">string</span></h5>
 									<div class="tsd-comment tsd-typography">
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/eventtrigger.html" class="tsd-signature-type">EventTrigger</a></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
 						</li>
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
-					<a name="getbyname" class="tsd-anchor"></a>
-					<h3><span class="tsd-flag ts-flagStatic">Static</span> get<wbr>ByName</h3>
+					<a name="isdifferentiating" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> is<wbr>Differentiating</h3>
 					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
-						<li class="tsd-signature tsd-kind-icon">get<wbr>ByName<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/eventtrigger.html" class="tsd-signature-type">EventTrigger</a></li>
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Differentiating<span class="tsd-signature-symbol">(</span>combo<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Types.KeyCombo</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/common/events/triggers.ts#L1107">common/events/triggers.ts:1107</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/common/keys.ts#L380">common/keys.ts:380</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
 								<div class="lead">
-									<p>Returns trigger definition based by name - string passed by user</p>
+									<p>Returns boolean whether this particular combo is requesting a location differentiation.
+									Basically checks the first letter of the key for &#39;l&#39; or &#39;r&#39;, excluding mentioned letters.</p>
 								</div>
-								<p>In case user requests key combo event, dummy object is returned</p>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<h5>combo: <span class="tsd-signature-type">Types.KeyCombo</span></h5>
 									<div class="tsd-comment tsd-typography">
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="../interfaces/eventtrigger.html" class="tsd-signature-type">EventTrigger</a></h4>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="isvalidshortcut" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> is<wbr>Valid<wbr>Shortcut</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Valid<wbr>Shortcut<span class="tsd-signature-symbol">(</span>combo<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Types.KeyCombo</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/common/keys.ts#L288">common/keys.ts:288</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns whether passed string is valid shortcut (key combo)</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>combo: <span class="tsd-signature-type">Types.KeyCombo</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="mapshortcutnotationtobtt" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> map<wbr>Shortcut<wbr>Notation<wbr>ToBTT</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">map<wbr>Shortcut<wbr>Notation<wbr>ToBTT<span class="tsd-signature-symbol">(</span>shortcut<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/common/keys.ts#L253">common/keys.ts:253</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Returns a valid BTT shortcut notation basing on given string</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>shortcut: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">string</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -226,19 +291,25 @@
 				</ul>
 				<ul class="current">
 					<li class="current tsd-kind-class">
-						<a href="eventtriggers.html" class="tsd-kind-icon">Event<wbr>Triggers</a>
+						<a href="keys.html" class="tsd-kind-icon">Keys</a>
 						<ul>
 							<li class=" tsd-kind-get-signature tsd-parent-kind-class tsd-is-static">
-								<a href="eventtriggers.html#all" class="tsd-kind-icon">all</a>
+								<a href="keys.html#list" class="tsd-kind-icon">list</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-								<a href="eventtriggers.html#getbycategory" class="tsd-kind-icon">get<wbr>ByCategory</a>
+								<a href="keys.html#createbitmaskforshortcut" class="tsd-kind-icon">create<wbr>Bitmask<wbr>For<wbr>Shortcut</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-								<a href="eventtriggers.html#getbyid" class="tsd-kind-icon">get<wbr>ById</a>
+								<a href="keys.html#getkeycode" class="tsd-kind-icon">get<wbr>Key<wbr>Code</a>
 							</li>
 							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
-								<a href="eventtriggers.html#getbyname" class="tsd-kind-icon">get<wbr>ByName</a>
+								<a href="keys.html#isdifferentiating" class="tsd-kind-icon">is<wbr>Differentiating</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="keys.html#isvalidshortcut" class="tsd-kind-icon">is<wbr>Valid<wbr>Shortcut</a>
+							</li>
+							<li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+								<a href="keys.html#mapshortcutnotationtobtt" class="tsd-kind-icon">map<wbr>Shortcut<wbr>Notation<wbr>ToBTT</a>
 							</li>
 						</ul>
 					</li>
