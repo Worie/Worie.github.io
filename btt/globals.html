@@ -71,7 +71,6 @@
 								<li class="tsd-kind-enum"><a href="enums/eactions.html" class="tsd-kind-icon">EActions</a></li>
 								<li class="tsd-kind-enum"><a href="enums/etouchbarwidgets.html" class="tsd-kind-icon">ETouch<wbr>Bar<wbr>Widgets</a></li>
 								<li class="tsd-kind-enum"><a href="enums/eventcategory.html" class="tsd-kind-icon">Event<wbr>Category</a></li>
-								<li class="tsd-kind-enum tsd-is-not-exported"><a href="enums/queuestatus.html" class="tsd-kind-icon">Queue<wbr>Status</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -107,10 +106,11 @@
 								<li class="tsd-kind-class"><a href="classes/atogglenightshift.html" class="tsd-kind-icon">AToggle<wbr>Night<wbr>Shift</a></li>
 								<li class="tsd-kind-class"><a href="classes/atoggletruetone.html" class="tsd-kind-icon">AToggle<wbr>True<wbr>Tone</a></li>
 								<li class="tsd-kind-class"><a href="classes/atriggershortcut.html" class="tsd-kind-icon">ATrigger<wbr>Shortcut</a></li>
+								<li class="tsd-kind-class"><a href="classes/actioninvoker.html" class="tsd-kind-icon">Action<wbr>Invoker</a></li>
 								<li class="tsd-kind-class"><a href="classes/backendutilities.html" class="tsd-kind-icon">Backend<wbr>Utilities</a></li>
 								<li class="tsd-kind-class"><a href="classes/baseaction.html" class="tsd-kind-icon">Base<wbr>Action</a></li>
 								<li class="tsd-kind-class"><a href="classes/btt.html" class="tsd-kind-icon">Btt</a></li>
-								<li class="tsd-kind-class tsd-is-not-exported"><a href="classes/chain.html" class="tsd-kind-icon">Chain</a></li>
+								<li class="tsd-kind-class"><a href="classes/chain.html" class="tsd-kind-icon">Chain</a></li>
 								<li class="tsd-kind-class"><a href="classes/eventmanager.html" class="tsd-kind-icon">Event<wbr>Manager</a></li>
 								<li class="tsd-kind-class"><a href="classes/eventtriggers.html" class="tsd-kind-icon">Event<wbr>Triggers</a></li>
 								<li class="tsd-kind-class"><a href="classes/ftrigger.html" class="tsd-kind-icon">FTrigger</a></li>
@@ -157,15 +157,43 @@
 								<li class="tsd-kind-type-alias"><a href="globals.html#actionjson" class="tsd-kind-icon">ActionJSON</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#apppayload" class="tsd-kind-icon">App<wbr>Payload</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#bttpayload" class="tsd-kind-icon">Btt<wbr>Payload</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chaindelaynextaction" class="tsd-kind-icon">Chain<wbr>Delay<wbr>Next<wbr>Action</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#chainentry" class="tsd-kind-icon">Chain<wbr>Entry</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chainexecutescript" class="tsd-kind-icon">Chain<wbr>Execute<wbr>Script</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chainhapticfeedback" class="tsd-kind-icon">Chain<wbr>Haptic<wbr>Feedback</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chainlaunchapplication" class="tsd-kind-icon">Chain<wbr>Launch<wbr>Application</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chainlockscreen" class="tsd-kind-icon">Chain<wbr>Lock<wbr>Screen</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chainlogout" class="tsd-kind-icon">Chain<wbr>Logout</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chainmovemouse" class="tsd-kind-icon">Chain<wbr>Move<wbr>Mouse</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chainmute" class="tsd-kind-icon">Chain<wbr>Mute</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chainquitbtt" class="tsd-kind-icon">Chain<wbr>QuitBTT</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#chainresponse" class="tsd-kind-icon">Chain<wbr>Response</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chainrestartbtt" class="tsd-kind-icon">Chain<wbr>RestartBTT</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chainsaveselectedtext" class="tsd-kind-icon">Chain<wbr>Save<wbr>Selected<wbr>Text</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chainsendshortcut" class="tsd-kind-icon">Chain<wbr>Send<wbr>Shortcut</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chainsendtext" class="tsd-kind-icon">Chain<wbr>Send<wbr>Text</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chainshowhud" class="tsd-kind-icon">Chain<wbr>ShowHUD</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chainshownotification" class="tsd-kind-icon">Chain<wbr>Show<wbr>Notification</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chainshowwebview" class="tsd-kind-icon">Chain<wbr>Show<wbr>Web<wbr>View</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chainsleepcomputer" class="tsd-kind-icon">Chain<wbr>Sleep<wbr>Computer</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chainsleepdisplay" class="tsd-kind-icon">Chain<wbr>Sleep<wbr>Display</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chainstartsiri" class="tsd-kind-icon">Chain<wbr>Start<wbr>Siri</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chaintoggleapplication" class="tsd-kind-icon">Chain<wbr>Toggle<wbr>Application</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chaintogglebtt" class="tsd-kind-icon">Chain<wbr>ToggleBTT</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chaintoggledarkmode" class="tsd-kind-icon">Chain<wbr>Toggle<wbr>Dark<wbr>Mode</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chaintogglednd" class="tsd-kind-icon">Chain<wbr>Toggle<wbr>DnD</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chaintogglemousecursor" class="tsd-kind-icon">Chain<wbr>Toggle<wbr>Mouse<wbr>Cursor</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chaintogglemousesize" class="tsd-kind-icon">Chain<wbr>Toggle<wbr>Mouse<wbr>Size</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chaintogglemousespeed" class="tsd-kind-icon">Chain<wbr>Toggle<wbr>Mouse<wbr>Speed</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chaintogglenightshift" class="tsd-kind-icon">Chain<wbr>Toggle<wbr>Night<wbr>Shift</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chaintoggletruetone" class="tsd-kind-icon">Chain<wbr>Toggle<wbr>True<wbr>Tone</a></li>
+								<li class="tsd-kind-type-alias"><a href="globals.html#chaintriggershortcut" class="tsd-kind-icon">Chain<wbr>Trigger<wbr>Shortcut</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#delaynextaction" class="tsd-kind-icon">Delay<wbr>Next<wbr>Action</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#etrmovemousetobottomleftcorner" class="tsd-kind-icon">ETRMove<wbr>Mouse<wbr>ToBottom<wbr>Left<wbr>Corner</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#etrmovemousetobottomrightcorner" class="tsd-kind-icon">ETRMove<wbr>Mouse<wbr>ToBottom<wbr>Right<wbr>Corner</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#etrmovemousetotopleftcorner" class="tsd-kind-icon">ETRMove<wbr>Mouse<wbr>ToTop<wbr>Left<wbr>Corner</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#etrmovemousetotoprightcorner" class="tsd-kind-icon">ETRMove<wbr>Mouse<wbr>ToTop<wbr>Right<wbr>Corner</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#eventcallback" class="tsd-kind-icon">Event<wbr>Callback</a></li>
-								<li class="tsd-kind-type-alias"><a href="globals.html#eventmethod" class="tsd-kind-icon">Event<wbr>Method</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#executescript" class="tsd-kind-icon">Execute<wbr>Script</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#hapticfeedback" class="tsd-kind-icon">Haptic<wbr>Feedback</a></li>
 								<li class="tsd-kind-type-alias"><a href="globals.html#keycombo" class="tsd-kind-icon">Key<wbr>Combo</a></li>
@@ -208,7 +236,8 @@
 							<h3>Functions</h3>
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function"><a href="globals.html#action" class="tsd-kind-icon">Action</a></li>
-								<li class="tsd-kind-function"><a href="globals.html#disallow" class="tsd-kind-icon">Disallow</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#chainable" class="tsd-kind-icon">Chainable</a></li>
+								<li class="tsd-kind-function"><a href="globals.html#eventmethod" class="tsd-kind-icon">Event<wbr>Method</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#eventpayloadtemplate" class="tsd-kind-icon">Event<wbr>Payload<wbr>Template</a></li>
 								<li class="tsd-kind-function tsd-is-not-exported"><a href="globals.html#checkblacklistpresence" class="tsd-kind-icon">check<wbr>Black<wbr>List<wbr>Presence</a></li>
 							</ul>
@@ -224,7 +253,7 @@
 					<div class="tsd-signature tsd-kind-icon">ActionJSON<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Partial</span><span class="tsd-signature-symbol">&lt;</span><a href="globals.html#apppayload" class="tsd-signature-type">AppPayload</a><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/types.ts#L102">types/types.ts:102</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/types.ts#L102">types/types.ts:102</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -234,7 +263,7 @@
 					<div class="tsd-signature tsd-kind-icon">App<wbr>Payload<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/types.ts#L140">types/types.ts:140</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/types.ts#L140">types/types.ts:140</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -244,9 +273,40 @@
 					<div class="tsd-signature tsd-kind-icon">Btt<wbr>Payload<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">Record</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">, </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/types.ts#L141">types/types.ts:141</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/types.ts#L141">types/types.ts:141</a></li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chaindelaynextaction" class="tsd-anchor"></a>
+					<h3>Chain<wbr>Delay<wbr>Next<wbr>Action</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>Delay<wbr>Next<wbr>Action<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L81">types/initializers.ts:81</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>timeout<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>timeout: <span class="tsd-signature-type">number</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias">
 					<a name="chainentry" class="tsd-anchor"></a>
@@ -254,7 +314,7 @@
 					<div class="tsd-signature tsd-kind-icon">Chain<wbr>Entry<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/types.ts#L19">types/types.ts:19</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/types.ts#L19">types/types.ts:19</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -274,14 +334,783 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chainexecutescript" class="tsd-anchor"></a>
+					<h3>Chain<wbr>Execute<wbr>Script</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>Execute<wbr>Script<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L73">types/initializers.ts:73</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>code<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>code: <span class="tsd-signature-type">string</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chainhapticfeedback" class="tsd-anchor"></a>
+					<h3>Chain<wbr>Haptic<wbr>Feedback</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>Haptic<wbr>Feedback<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L79">types/initializers.ts:79</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>mode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>mode: <span class="tsd-signature-type">number</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chainlaunchapplication" class="tsd-anchor"></a>
+					<h3>Chain<wbr>Launch<wbr>Application</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>Launch<wbr>Application<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L86">types/initializers.ts:86</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>applicationPath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>applicationPath: <span class="tsd-signature-type">string</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chainlockscreen" class="tsd-anchor"></a>
+					<h3>Chain<wbr>Lock<wbr>Screen</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>Lock<wbr>Screen<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L89">types/initializers.ts:89</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chainlogout" class="tsd-anchor"></a>
+					<h3>Chain<wbr>Logout</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>Logout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L88">types/initializers.ts:88</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chainmovemouse" class="tsd-anchor"></a>
+					<h3>Chain<wbr>Move<wbr>Mouse</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>Move<wbr>Mouse<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L80">types/initializers.ts:80</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>config<span class="tsd-signature-symbol">: </span><a href="interfaces/movemouseconfig.html" class="tsd-signature-type">MoveMouseConfig</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>config: <a href="interfaces/movemouseconfig.html" class="tsd-signature-type">MoveMouseConfig</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chainmute" class="tsd-anchor"></a>
+					<h3>Chain<wbr>Mute</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>Mute<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L84">types/initializers.ts:84</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chainquitbtt" class="tsd-anchor"></a>
+					<h3>Chain<wbr>QuitBTT</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>QuitBTT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L95">types/initializers.ts:95</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
 					<a name="chainresponse" class="tsd-anchor"></a>
 					<h3>Chain<wbr>Response</h3>
 					<div class="tsd-signature tsd-kind-icon">Chain<wbr>Response<span class="tsd-signature-symbol">:</span> <a href="interfaces/callresult.html" class="tsd-signature-type">CallResult</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/types.ts#L17">types/types.ts:17</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/types.ts#L17">types/types.ts:17</a></li>
 						</ul>
 					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chainrestartbtt" class="tsd-anchor"></a>
+					<h3>Chain<wbr>RestartBTT</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>RestartBTT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L97">types/initializers.ts:97</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chainsaveselectedtext" class="tsd-anchor"></a>
+					<h3>Chain<wbr>Save<wbr>Selected<wbr>Text</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>Save<wbr>Selected<wbr>Text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L98">types/initializers.ts:98</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chainsendshortcut" class="tsd-anchor"></a>
+					<h3>Chain<wbr>Send<wbr>Shortcut</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>Send<wbr>Shortcut<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L100">types/initializers.ts:100</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>shortcut<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, applicationPath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, mdlsName<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>shortcut: <span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li>
+												<h5>applicationPath: <span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> mdlsName: <span class="tsd-signature-type">string</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chainsendtext" class="tsd-anchor"></a>
+					<h3>Chain<wbr>Send<wbr>Text</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>Send<wbr>Text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L78">types/initializers.ts:78</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>config<span class="tsd-signature-symbol">: </span><a href="interfaces/sendtextconfig.html" class="tsd-signature-type">SendTextConfig</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>config: <a href="interfaces/sendtextconfig.html" class="tsd-signature-type">SendTextConfig</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chainshowhud" class="tsd-anchor"></a>
+					<h3>Chain<wbr>ShowHUD</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>ShowHUD<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L77">types/initializers.ts:77</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>config<span class="tsd-signature-symbol">: </span><a href="interfaces/showhudconfig.html" class="tsd-signature-type">ShowHUDConfig</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>config: <a href="interfaces/showhudconfig.html" class="tsd-signature-type">ShowHUDConfig</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chainshownotification" class="tsd-anchor"></a>
+					<h3>Chain<wbr>Show<wbr>Notification</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>Show<wbr>Notification<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L96">types/initializers.ts:96</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>config<span class="tsd-signature-symbol">: </span><a href="interfaces/shownotificationconfig.html" class="tsd-signature-type">ShowNotificationConfig</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>config: <a href="interfaces/shownotificationconfig.html" class="tsd-signature-type">ShowNotificationConfig</a></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chainshowwebview" class="tsd-anchor"></a>
+					<h3>Chain<wbr>Show<wbr>Web<wbr>View</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>Show<wbr>Web<wbr>View<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L90">types/initializers.ts:90</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chainsleepcomputer" class="tsd-anchor"></a>
+					<h3>Chain<wbr>Sleep<wbr>Computer</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>Sleep<wbr>Computer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L99">types/initializers.ts:99</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chainsleepdisplay" class="tsd-anchor"></a>
+					<h3>Chain<wbr>Sleep<wbr>Display</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>Sleep<wbr>Display<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L87">types/initializers.ts:87</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chainstartsiri" class="tsd-anchor"></a>
+					<h3>Chain<wbr>Start<wbr>Siri</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>Start<wbr>Siri<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L83">types/initializers.ts:83</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chaintoggleapplication" class="tsd-anchor"></a>
+					<h3>Chain<wbr>Toggle<wbr>Application</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>Toggle<wbr>Application<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L85">types/initializers.ts:85</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>applicationPath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, binaryPath<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>applicationPath: <span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li>
+												<h5>binaryPath: <span class="tsd-signature-type">string</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chaintogglebtt" class="tsd-anchor"></a>
+					<h3>Chain<wbr>ToggleBTT</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>ToggleBTT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L82">types/initializers.ts:82</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chaintoggledarkmode" class="tsd-anchor"></a>
+					<h3>Chain<wbr>Toggle<wbr>Dark<wbr>Mode</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>Toggle<wbr>Dark<wbr>Mode<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L91">types/initializers.ts:91</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chaintogglednd" class="tsd-anchor"></a>
+					<h3>Chain<wbr>Toggle<wbr>DnD</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>Toggle<wbr>DnD<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L72">types/initializers.ts:72</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chaintogglemousecursor" class="tsd-anchor"></a>
+					<h3>Chain<wbr>Toggle<wbr>Mouse<wbr>Cursor</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>Toggle<wbr>Mouse<wbr>Cursor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L93">types/initializers.ts:93</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chaintogglemousesize" class="tsd-anchor"></a>
+					<h3>Chain<wbr>Toggle<wbr>Mouse<wbr>Size</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>Toggle<wbr>Mouse<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L92">types/initializers.ts:92</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chaintogglemousespeed" class="tsd-anchor"></a>
+					<h3>Chain<wbr>Toggle<wbr>Mouse<wbr>Speed</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>Toggle<wbr>Mouse<wbr>Speed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L94">types/initializers.ts:94</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chaintogglenightshift" class="tsd-anchor"></a>
+					<h3>Chain<wbr>Toggle<wbr>Night<wbr>Shift</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>Toggle<wbr>Night<wbr>Shift<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L75">types/initializers.ts:75</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chaintoggletruetone" class="tsd-anchor"></a>
+					<h3>Chain<wbr>Toggle<wbr>True<wbr>Tone</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>Toggle<wbr>True<wbr>Tone<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L74">types/initializers.ts:74</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias">
+					<a name="chaintriggershortcut" class="tsd-anchor"></a>
+					<h3>Chain<wbr>Trigger<wbr>Shortcut</h3>
+					<div class="tsd-signature tsd-kind-icon">Chain<wbr>Trigger<wbr>Shortcut<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L76">types/initializers.ts:76</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-type-alias tsd-is-not-exported">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>shortcut<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="classes/chain.html" class="tsd-signature-type">Chain</a></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>shortcut: <span class="tsd-signature-type">string</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <a href="classes/chain.html" class="tsd-signature-type">Chain</a></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias">
 					<a name="delaynextaction" class="tsd-anchor"></a>
@@ -289,7 +1118,7 @@
 					<div class="tsd-signature tsd-kind-icon">Delay<wbr>Next<wbr>Action<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L49">types/initializers.ts:49</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L49">types/initializers.ts:49</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -320,7 +1149,7 @@
 					<div class="tsd-signature tsd-kind-icon">ETRMove<wbr>Mouse<wbr>ToBottom<wbr>Left<wbr>Corner<span class="tsd-signature-symbol">:</span> <a href="interfaces/etrmovemousetocorner.html" class="tsd-signature-type">ETRMoveMouseToCorner</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/types.ts#L176">types/types.ts:176</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/types.ts#L176">types/types.ts:176</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -330,7 +1159,7 @@
 					<div class="tsd-signature tsd-kind-icon">ETRMove<wbr>Mouse<wbr>ToBottom<wbr>Right<wbr>Corner<span class="tsd-signature-symbol">:</span> <a href="interfaces/etrmovemousetocorner.html" class="tsd-signature-type">ETRMoveMouseToCorner</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/types.ts#L177">types/types.ts:177</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/types.ts#L177">types/types.ts:177</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -340,7 +1169,7 @@
 					<div class="tsd-signature tsd-kind-icon">ETRMove<wbr>Mouse<wbr>ToTop<wbr>Left<wbr>Corner<span class="tsd-signature-symbol">:</span> <a href="interfaces/etrmovemousetocorner.html" class="tsd-signature-type">ETRMoveMouseToCorner</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/types.ts#L174">types/types.ts:174</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/types.ts#L174">types/types.ts:174</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -350,7 +1179,7 @@
 					<div class="tsd-signature tsd-kind-icon">ETRMove<wbr>Mouse<wbr>ToTop<wbr>Right<wbr>Corner<span class="tsd-signature-symbol">:</span> <a href="interfaces/etrmovemousetocorner.html" class="tsd-signature-type">ETRMoveMouseToCorner</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/types.ts#L175">types/types.ts:175</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/types.ts#L175">types/types.ts:175</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -360,7 +1189,7 @@
 					<div class="tsd-signature tsd-kind-icon">Event<wbr>Callback<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/types.ts#L155">types/types.ts:155</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/types.ts#L155">types/types.ts:155</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -386,44 +1215,12 @@
 					</div>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-type-alias">
-					<a name="eventmethod" class="tsd-anchor"></a>
-					<h3>Event<wbr>Method</h3>
-					<ul class="tsd-signatures tsd-kind-type-alias">
-						<li class="tsd-signature tsd-kind-icon">Event<wbr>Method<span class="tsd-signature-symbol">(</span>methodName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span></li>
-					</ul>
-					<ul class="tsd-descriptions">
-						<li class="tsd-description">
-							<aside class="tsd-sources">
-								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/common/decorators.ts#L45">common/decorators.ts:45</a></li>
-								</ul>
-							</aside>
-							<div class="tsd-comment tsd-typography">
-								<div class="lead">
-									<p>This decorator initializes the given method as a event equivalent of particular btt instance</p>
-								</div>
-							</div>
-							<h4 class="tsd-parameters-title">Parameters</h4>
-							<ul class="tsd-parameters">
-								<li>
-									<h5>methodName: <span class="tsd-signature-type">string</span></h5>
-									<div class="tsd-comment tsd-typography">
-										<div class="lead">
-										</div>
-									</div>
-								</li>
-							</ul>
-							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Function</span></h4>
-						</li>
-					</ul>
-				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias">
 					<a name="executescript" class="tsd-anchor"></a>
 					<h3>Execute<wbr>Script</h3>
 					<div class="tsd-signature tsd-kind-icon">Execute<wbr>Script<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L41">types/initializers.ts:41</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L69">types/initializers.ts:69</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -454,7 +1251,7 @@
 					<div class="tsd-signature tsd-kind-icon">Haptic<wbr>Feedback<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L47">types/initializers.ts:47</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L47">types/initializers.ts:47</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -485,7 +1282,7 @@
 					<div class="tsd-signature tsd-kind-icon">Key<wbr>Combo<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/types.ts#L139">types/types.ts:139</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/types.ts#L139">types/types.ts:139</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -495,7 +1292,7 @@
 					<div class="tsd-signature tsd-kind-icon">Launch<wbr>Application<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L54">types/initializers.ts:54</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L54">types/initializers.ts:54</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -526,7 +1323,7 @@
 					<div class="tsd-signature tsd-kind-icon">Lock<wbr>Screen<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L57">types/initializers.ts:57</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L57">types/initializers.ts:57</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -551,7 +1348,7 @@
 					<div class="tsd-signature tsd-kind-icon">Logout<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L56">types/initializers.ts:56</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L56">types/initializers.ts:56</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -576,7 +1373,7 @@
 					<div class="tsd-signature tsd-kind-icon">Move<wbr>Mouse<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L48">types/initializers.ts:48</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L48">types/initializers.ts:48</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -607,7 +1404,7 @@
 					<div class="tsd-signature tsd-kind-icon">Mute<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L52">types/initializers.ts:52</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L52">types/initializers.ts:52</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -632,7 +1429,7 @@
 					<div class="tsd-signature tsd-kind-icon">QuitBTT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L63">types/initializers.ts:63</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L63">types/initializers.ts:63</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -657,7 +1454,7 @@
 					<div class="tsd-signature tsd-kind-icon">RestartBTT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L65">types/initializers.ts:65</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L65">types/initializers.ts:65</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -682,7 +1479,7 @@
 					<div class="tsd-signature tsd-kind-icon">Save<wbr>Selected<wbr>Text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L66">types/initializers.ts:66</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L66">types/initializers.ts:66</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -707,7 +1504,7 @@
 					<div class="tsd-signature tsd-kind-icon">Send<wbr>Shortcut<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L68">types/initializers.ts:68</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L68">types/initializers.ts:68</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -744,7 +1541,7 @@
 					<div class="tsd-signature tsd-kind-icon">Send<wbr>Text<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L46">types/initializers.ts:46</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L46">types/initializers.ts:46</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -775,7 +1572,7 @@
 					<div class="tsd-signature tsd-kind-icon">ShowHUD<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L45">types/initializers.ts:45</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L45">types/initializers.ts:45</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -806,7 +1603,7 @@
 					<div class="tsd-signature tsd-kind-icon">Show<wbr>Notification<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L64">types/initializers.ts:64</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L64">types/initializers.ts:64</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -837,7 +1634,7 @@
 					<div class="tsd-signature tsd-kind-icon">Show<wbr>Web<wbr>View<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L58">types/initializers.ts:58</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L58">types/initializers.ts:58</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -862,7 +1659,7 @@
 					<div class="tsd-signature tsd-kind-icon">Sleep<wbr>Computer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L67">types/initializers.ts:67</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L67">types/initializers.ts:67</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -887,7 +1684,7 @@
 					<div class="tsd-signature tsd-kind-icon">Sleep<wbr>Display<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L55">types/initializers.ts:55</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L55">types/initializers.ts:55</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -912,7 +1709,7 @@
 					<div class="tsd-signature tsd-kind-icon">Start<wbr>Siri<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L51">types/initializers.ts:51</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L51">types/initializers.ts:51</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -937,7 +1734,7 @@
 					<div class="tsd-signature tsd-kind-icon">Toggle<wbr>Application<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L53">types/initializers.ts:53</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L53">types/initializers.ts:53</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -971,7 +1768,7 @@
 					<div class="tsd-signature tsd-kind-icon">ToggleBTT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L50">types/initializers.ts:50</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L50">types/initializers.ts:50</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -996,7 +1793,7 @@
 					<div class="tsd-signature tsd-kind-icon">Toggle<wbr>Dark<wbr>Mode<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L59">types/initializers.ts:59</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L59">types/initializers.ts:59</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -1021,7 +1818,7 @@
 					<div class="tsd-signature tsd-kind-icon">Toggle<wbr>DnD<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L40">types/initializers.ts:40</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L70">types/initializers.ts:70</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -1046,7 +1843,7 @@
 					<div class="tsd-signature tsd-kind-icon">Toggle<wbr>Mouse<wbr>Cursor<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L61">types/initializers.ts:61</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L61">types/initializers.ts:61</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -1071,7 +1868,7 @@
 					<div class="tsd-signature tsd-kind-icon">Toggle<wbr>Mouse<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L60">types/initializers.ts:60</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L60">types/initializers.ts:60</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -1096,7 +1893,7 @@
 					<div class="tsd-signature tsd-kind-icon">Toggle<wbr>Mouse<wbr>Speed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L62">types/initializers.ts:62</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L62">types/initializers.ts:62</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -1121,7 +1918,7 @@
 					<div class="tsd-signature tsd-kind-icon">Toggle<wbr>Night<wbr>Shift<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L43">types/initializers.ts:43</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L43">types/initializers.ts:43</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -1146,7 +1943,7 @@
 					<div class="tsd-signature tsd-kind-icon">Toggle<wbr>True<wbr>Tone<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L42">types/initializers.ts:42</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L42">types/initializers.ts:42</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -1171,7 +1968,7 @@
 					<div class="tsd-signature tsd-kind-icon">Trigger<wbr>Shortcut<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/types/initializers.ts#L44">types/initializers.ts:44</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/types/initializers.ts#L44">types/initializers.ts:44</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-type-declaration">
@@ -1205,7 +2002,7 @@
 					<div class="tsd-signature tsd-kind-icon">NAMESPACE<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">"87a84aef-11fe-4dce-8d00-429cea46f345"</span><span class="tsd-signature-symbol"> =&nbsp;&quot;87a84aef-11fe-4dce-8d00-429cea46f345&quot;</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/abstract/utils.ts#L6">abstract/utils.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/abstract/utils.ts#L6">abstract/utils.ts:6</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -1215,7 +2012,7 @@
 					<div class="tsd-signature tsd-kind-icon">Utils<span class="tsd-signature-symbol">:</span> <a href="classes/utilities.html" class="tsd-signature-type">Utilities</a></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/common/util.ts#L6">common/util.ts:6</a></li>
+							<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/common/util.ts#L6">common/util.ts:6</a></li>
 						</ul>
 					</aside>
 				</section>
@@ -1232,7 +2029,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/common/decorators.ts#L11">common/decorators.ts:11</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/common/decorators.ts#L11">common/decorators.ts:11</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1251,22 +2048,46 @@
 					</ul>
 				</section>
 				<section class="tsd-panel tsd-member tsd-kind-function">
-					<a name="disallow" class="tsd-anchor"></a>
-					<h3>Disallow</h3>
+					<a name="chainable" class="tsd-anchor"></a>
+					<h3>Chainable</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">Disallow<span class="tsd-signature-symbol">(</span>reason<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span></li>
+						<li class="tsd-signature tsd-kind-icon">Chainable<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/common/decorators.ts#L55">common/decorators.ts:55</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/common/decorators.ts#L32">common/decorators.ts:32</a></li>
 								</ul>
 							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Function</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function">
+					<a name="eventmethod" class="tsd-anchor"></a>
+					<h3>Event<wbr>Method</h3>
+					<ul class="tsd-signatures tsd-kind-function">
+						<li class="tsd-signature tsd-kind-icon">Event<wbr>Method<span class="tsd-signature-symbol">(</span>methodName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Function</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/common/decorators.ts#L52">common/decorators.ts:52</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>This decorator initializes the given method as a event equivalent of particular btt instance</p>
+								</div>
+							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>reason: <span class="tsd-signature-type">string</span></h5>
+									<h5>methodName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography">
+									</div>
 								</li>
 							</ul>
 							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Function</span></h4>
@@ -1283,7 +2104,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/common/events/payload.ts#L1">common/events/payload.ts:1</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/common/events/payload.ts#L1">common/events/payload.ts:1</a></li>
 								</ul>
 							</aside>
 							<h4 class="tsd-parameters-title">Parameters</h4>
@@ -1306,7 +2127,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/Worie/btt/blob/be2193b/src/common/decorators.ts#L73">common/decorators.ts:73</a></li>
+									<li>Defined in <a href="https://github.com/Worie/btt/blob/7e558f8/src/common/decorators.ts#L67">common/decorators.ts:67</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -1349,9 +2170,6 @@
 					</li>
 					<li class=" tsd-kind-enum">
 						<a href="enums/eventcategory.html" class="tsd-kind-icon">Event<wbr>Category</a>
-					</li>
-					<li class=" tsd-kind-enum tsd-is-not-exported">
-						<a href="enums/queuestatus.html" class="tsd-kind-icon">Queue<wbr>Status</a>
 					</li>
 					<li class=" tsd-kind-class">
 						<a href="classes/adelaynextaction.html" class="tsd-kind-icon">ADelay<wbr>Next<wbr>Action</a>
@@ -1444,6 +2262,9 @@
 						<a href="classes/atriggershortcut.html" class="tsd-kind-icon">ATrigger<wbr>Shortcut</a>
 					</li>
 					<li class=" tsd-kind-class">
+						<a href="classes/actioninvoker.html" class="tsd-kind-icon">Action<wbr>Invoker</a>
+					</li>
+					<li class=" tsd-kind-class">
 						<a href="classes/backendutilities.html" class="tsd-kind-icon">Backend<wbr>Utilities</a>
 					</li>
 					<li class=" tsd-kind-class">
@@ -1452,7 +2273,7 @@
 					<li class=" tsd-kind-class">
 						<a href="classes/btt.html" class="tsd-kind-icon">Btt</a>
 					</li>
-					<li class=" tsd-kind-class tsd-is-not-exported">
+					<li class=" tsd-kind-class">
 						<a href="classes/chain.html" class="tsd-kind-icon">Chain</a>
 					</li>
 					<li class=" tsd-kind-class">
@@ -1564,10 +2385,97 @@
 						<a href="globals.html#bttpayload" class="tsd-kind-icon">Btt<wbr>Payload</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chaindelaynextaction" class="tsd-kind-icon">Chain<wbr>Delay<wbr>Next<wbr>Action</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#chainentry" class="tsd-kind-icon">Chain<wbr>Entry</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chainexecutescript" class="tsd-kind-icon">Chain<wbr>Execute<wbr>Script</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chainhapticfeedback" class="tsd-kind-icon">Chain<wbr>Haptic<wbr>Feedback</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chainlaunchapplication" class="tsd-kind-icon">Chain<wbr>Launch<wbr>Application</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chainlockscreen" class="tsd-kind-icon">Chain<wbr>Lock<wbr>Screen</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chainlogout" class="tsd-kind-icon">Chain<wbr>Logout</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chainmovemouse" class="tsd-kind-icon">Chain<wbr>Move<wbr>Mouse</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chainmute" class="tsd-kind-icon">Chain<wbr>Mute</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chainquitbtt" class="tsd-kind-icon">Chain<wbr>QuitBTT</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#chainresponse" class="tsd-kind-icon">Chain<wbr>Response</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chainrestartbtt" class="tsd-kind-icon">Chain<wbr>RestartBTT</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chainsaveselectedtext" class="tsd-kind-icon">Chain<wbr>Save<wbr>Selected<wbr>Text</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chainsendshortcut" class="tsd-kind-icon">Chain<wbr>Send<wbr>Shortcut</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chainsendtext" class="tsd-kind-icon">Chain<wbr>Send<wbr>Text</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chainshowhud" class="tsd-kind-icon">Chain<wbr>ShowHUD</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chainshownotification" class="tsd-kind-icon">Chain<wbr>Show<wbr>Notification</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chainshowwebview" class="tsd-kind-icon">Chain<wbr>Show<wbr>Web<wbr>View</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chainsleepcomputer" class="tsd-kind-icon">Chain<wbr>Sleep<wbr>Computer</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chainsleepdisplay" class="tsd-kind-icon">Chain<wbr>Sleep<wbr>Display</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chainstartsiri" class="tsd-kind-icon">Chain<wbr>Start<wbr>Siri</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chaintoggleapplication" class="tsd-kind-icon">Chain<wbr>Toggle<wbr>Application</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chaintogglebtt" class="tsd-kind-icon">Chain<wbr>ToggleBTT</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chaintoggledarkmode" class="tsd-kind-icon">Chain<wbr>Toggle<wbr>Dark<wbr>Mode</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chaintogglednd" class="tsd-kind-icon">Chain<wbr>Toggle<wbr>DnD</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chaintogglemousecursor" class="tsd-kind-icon">Chain<wbr>Toggle<wbr>Mouse<wbr>Cursor</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chaintogglemousesize" class="tsd-kind-icon">Chain<wbr>Toggle<wbr>Mouse<wbr>Size</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chaintogglemousespeed" class="tsd-kind-icon">Chain<wbr>Toggle<wbr>Mouse<wbr>Speed</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chaintogglenightshift" class="tsd-kind-icon">Chain<wbr>Toggle<wbr>Night<wbr>Shift</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chaintoggletruetone" class="tsd-kind-icon">Chain<wbr>Toggle<wbr>True<wbr>Tone</a>
+					</li>
+					<li class=" tsd-kind-type-alias">
+						<a href="globals.html#chaintriggershortcut" class="tsd-kind-icon">Chain<wbr>Trigger<wbr>Shortcut</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#delaynextaction" class="tsd-kind-icon">Delay<wbr>Next<wbr>Action</a>
@@ -1586,9 +2494,6 @@
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#eventcallback" class="tsd-kind-icon">Event<wbr>Callback</a>
-					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="globals.html#eventmethod" class="tsd-kind-icon">Event<wbr>Method</a>
 					</li>
 					<li class=" tsd-kind-type-alias">
 						<a href="globals.html#executescript" class="tsd-kind-icon">Execute<wbr>Script</a>
@@ -1687,7 +2592,10 @@
 						<a href="globals.html#action" class="tsd-kind-icon">Action</a>
 					</li>
 					<li class=" tsd-kind-function">
-						<a href="globals.html#disallow" class="tsd-kind-icon">Disallow</a>
+						<a href="globals.html#chainable" class="tsd-kind-icon">Chainable</a>
+					</li>
+					<li class=" tsd-kind-function">
+						<a href="globals.html#eventmethod" class="tsd-kind-icon">Event<wbr>Method</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#eventpayloadtemplate" class="tsd-kind-icon">Event<wbr>Payload<wbr>Template</a>
