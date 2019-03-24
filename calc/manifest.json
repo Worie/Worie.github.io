@@ -1,0 +1,13 @@
+{
+  "name": "Calculator",
+  "short_name": "Calculator",
+  "lang": "en",
+  "theme_color": "#ff7a75",
+  "background_color": "#ff7a75",
+  "display": "standalone",
+  "orientation": "portrait",
+  "Scope": "/",
+  "start_url": "/",
+  "icons": [],
+  "splash_pages": null
+}
